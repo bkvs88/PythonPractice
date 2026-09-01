@@ -1,1 +1,121 @@
 
+## Print numbers 1 to 100 using for loop
+### using range()
+for i in range(1,101):
+    print(i)
+
+
+## using while loop
+i=1
+while i<=100:
+    print(i)
+    i=i+1
+
+
+### Print all even numbers from 1 to 100.
+### using for loop and range()
+for i in range(2,101,2):
+    print(i)
+
+### using while loop
+i=1
+while i<=100:
+    if i%2==0:
+        print(i)
+    i=i+1
+
+### Print all odd numbers from 1 to 100
+### using for loop and range()
+for i in range(1,101,2):
+    print(i)
+
+### using while loop
+i=1
+while i<=100:
+    if i%2==1:
+        print(i)
+    i=i+1
+
+### Take an integer n and print its multiplication table from 1 to 20.
+num_inp = int(input("enter any integer number that need table from 1 to 20"))
+print(f"Displaying {num_inp} table ")
+for i in range(1,21):
+    val=num_inp*i
+    print(f"{num_inp} X {i} = {val}")
+
+
+### Calculate the sum of numbers from 1 to n using a loop.
+num_inp = int(input("enter any number that need sum from 1 to n"))
+i =1
+sum=0
+while i <=num_inp :
+    sum = sum+i
+    i=i+1
+
+print(f"Total sum from 1 to {i} is {sum}")
+
+### Calculate the factorial of a number without using any built-in factorial function.
+num_inp = int(input("enter any number for factorial"))
+fact=1
+temp=num_inp
+while num_inp >= 1 :
+    fact = fact * num_inp
+    num_inp = num_inp - 1
+
+print(f"Total factorial of {temp} is {fact}")
+
+
+### Given numbers = [12, 7, 9, 20, 33, 42, 8, 15] Print only the numbers divisible by 3.
+numbers = [12, 7, 9, 20, 33, 42, 8, 15]
+print(f"Following numbers are divisible by 3 from given list {numbers}")
+for i in numbers:
+    if i%3==0:
+        print(i)
+
+
+### Given languages = ["Python", "Java", "C++", "JavaScript", "Go"] Print every language along with its length.
+languages = ["Python", "Java", "C++", "JavaScript", "Go"]
+for i in languages:
+    print(f"length of {i} is {len(i)}")
+
+### Iterate through student = {"name": "Rahul","age": 22,"course": "Data Science","city": "Bangalore" } and print every key and value.
+student = {
+"name": "Rahul",
+"age": 22,
+"course": "Data Science",
+"city": "Bangalore"
+}
+for key,value in student.items():
+    print(f"{key} : {value} " )
+
+### Count how many vowels exist in a user-provided string.
+inp_string=input("Enter string to check number of vowels")
+print (f"string entered is {inp_string}")
+inp_string=inp_string.lower()
+vowels = "aeiou"
+vowel_count=0
+for char in inp_string:
+    # print(char)
+    if char in vowels:
+        vowel_count=vowel_count+1
+print(f'number of vowels found in ""{inp_string}"" are {vowel_count}')
+
+
+
+### Reverse a string using a for loop without using [::-1] or reversed().
+input_string = "HELLO"
+reversed_str=""
+for i in input_string:
+   reversed_str= i + reversed_str
+print(reversed_str)
+
+### Find the largest number from a list without using max().
+numbers = [12, 7, 9, 20, 33, 42, 8, 15, 25, 99, 86]
+large_number=0
+for i in numbers:
+    if i>large_number:
+        large_number=i
+    else:
+        large_number=large_number
+print(f'{large_number} is the Largest number from the given list [{numbers}] ')
+
