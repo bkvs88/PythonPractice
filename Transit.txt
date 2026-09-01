@@ -120,3 +120,117 @@ for i in numbers:
         large_number=large_number
 print(f'{large_number} is the Largest number from the given list [{numbers}] ')
 
+#Print numbers from 1–100 but skip numbers divisible by 5 using continue.
+numbers = range(1,101)
+for i in numbers:
+    if i % 5 !=0:
+        continue
+    else:
+        print(i)
+
+
+#Iterate from 1–100 and stop when you encounter the first number divisible by both 7 and 11.
+numbers = range(1,101)
+for i in numbers:
+    if i % 7 == 0 and i % 11 == 0:
+        print(f"Number {i} found divisible by 7 and 11")
+        break
+
+#Search for a user-provided number inside a list. Use for-else to print:
+numbers = [12, 7, 9, 20, 33, 42, 8, 15, 25, 99, 86]
+number_to_search=int(input("enter number to search"))
+for i in numbers:
+    if number_to_search == i:
+        print ("Number Found")
+        break;
+else:
+    print("Number not found")
+
+### Given names = ["Aman", "Ravi", "Sudhanshu", "Priya", "Anjali"] use enumerate() to display
+names = ["Aman", "Ravi", "Sudhanshu", "Priya", "Anjali"]
+for index,name in enumerate(names,start=1):
+    print(index,name)
+
+
+#Print the following pattern
+#*
+#**
+#***
+#****
+#*****
+counter=range(1,6)
+for i in counter:
+    print("*"*i)
+
+
+#Print the following pattern
+#*****
+#****
+#***
+#**
+#*
+counter=range(5,0,-1)
+for i in counter:
+    print("*"*i)
+
+
+
+##Generate multiplication tables from 1 to 10 using nested loops.
+table = range(1,11)
+multiplier=range(1,13)
+for i in table:
+    print(f"{i} Table ")
+    for j in multiplier:
+        value= i*j
+        print(f"{i}*{j}={value}")
+
+
+#Find all numbers between 1 and 200 divisible by both 3 and 5.
+numbers=range(0,201)
+Number_div_by_3_5=[]
+for i in numbers:
+    if i%3 ==0 and i%5==0:
+        Number_div_by_3_5.append(i)
+print(Number_div_by_3_5)
+
+#Given a list containing duplicate elements, create another list containing only unique elements without using set().
+numbers_list= [0, 15, 30, 15, 45,45, 60, 75, 90,90, 105, 120, 135, 150, 165, 180, 195]
+duplicate_list=[]
+for i in numbers_list:
+    if i not in duplicate_list:
+        duplicate_list.append(i)
+print(duplicate_list)
+
+
+##Given numbers = [10, -4, 8, -2, 0, 15, -9, 21] count positive numbers , negative numbers,  zeros
+numbers_list= [0,1,2,3,4,5,6,7,8,9,10,11,12,334,335,-100,-101,-23,-345]
+zero_count=0
+positive_count=0
+negative_count=0
+for i in numbers_list:
+    if i == 0:
+        zero_count=zero_count+1
+    elif i > 0 :
+        positive_count=positive_count+1
+    else:
+        negative_count=negative_count+1
+print(f"positive numbers count is : {positive_count}\nnegative numbers count is :{negative_count}\nzeros count is :{zero_count}")
+
+
+##Write a program to determine whether a number is prime using a loop.
+number_inp=input("enter number to check whether given number is prime or not")
+number_inp=int(num_inp)
+check = range(2,num_inp)
+for i in check:
+    print(i)
+    if num_inp%i==0:
+        print("Not a prime")
+        break
+else:
+    print("Prime number")
+
+
+
+
+
+
