@@ -238,6 +238,163 @@ for i in range(2,101):
     else:
         print(i,end=" ")
 
+### From the same list, find the highest and lowest transaction without max() and min().
+transactions = [1200, 450, 800, 1500, 2300, 700, 100]
+sum=0
+highestval=0
+lowestval=999999999999999
+for i in transactions:
+    sum=sum+i
+    if i>highestval:
+        highestval=i
+    if i<lowestval:
+        lowestval=i
+print(f"Total Transaction value is {sum}")
+print(f"Max Transaction value is {highestval}")
+print(f"Low Transaction value is {lowestval}")
+
+
+### find the average temperature.
+temperatures = [32, 35, 28, 40, 38, 31, 42]
+sum=0
+for index,number in enumerate(temperatures,start=1):
+    sum=sum+number
+    total=index
+print(f"Average temperature is {sum/total}")
+
+#count how many students scored 90 +75–89 50–74 below 50
+marks = [78, 92, 45, 67, 88, 53, 99]
+count_90_plus=0
+count_75_to_89=0
+count_50_to_74=0
+count_below_50=0
+for i in marks:
+    if i >= 90:
+        count_90_plus=count_90_plus+1
+    elif i < 90 and i>=75:
+        count_75_to_89=count_75_to_89+1
+    elif i<75 and i>=50:
+        count_50_to_74=count_50_to_74+1
+    elif i<50:
+        count_below_50=count_below_50+1
+
+print(f"{count_90_plus} students scored 90+")
+print(f"{count_75_to_89} students scored between 75 to 89")
+print(f"{count_75_to_89} students scored between 50 to 74")
+print(f"{count_below_50} students scored below 50")
+
+
+### Create a simple login system with a maximum of 3 password attempts.
+
+correct_pwd="Password"
+max_attempts=3
+for attempt in range(1,max_attempts+1):
+    user_input=input(f"Enter your passowrd Attempt {attempt}/{max_attempts}")
+    if user_input == correct_pwd:
+        print("Welcome to the world of python")
+        break
+    else:
+        print("Incorrect password, Try again")
+else:
+    print("Account Locked, Maximum Attempts Exceeded")
+
+
+#print only products costing more than ₹2,000.
+products = {"Laptop": 55000,"Phone": 30000,"Headphones": 2000,"Mouse": 700,"Keyboard": 1500}
+for i in products.keys():
+    if products[i] > 2000:
+        print(i ,end= " ")
+
+
+##Accept 10 numbers from the user and store them in a list using a loop.
+number_list=[ ]
+for i in range(1,11):
+    input_number=int(input("Enter number to store"))
+    print(f"User Entered {input_number}")
+    number_list.append(input_number)
+print(number_list)
+
+
+
+### Count the frequency of every character in a string without using Counter.
+string="banana"
+dict_op={}
+for i in string:
+    dict_op[i]=dict_op.get(i,0)+1
+for key, value in list_op.items():
+    print(f"{key} -> {value}")
+
+
+#Check whether a string is a palindrome using loops.
+input_str=input("Enter string to check whether palindrome or not")
+is_palindrome=True
+n = len(input_str)
+print(n//2)
+for i in range(n // 2):
+    print(f"{input_str[i]} , {input_str[n-1-i]}")
+    if input_str[i] != input_str[n - 1 - i]:
+        is_palindrome = False
+        break
+if is_palindrome:
+    print(f'"{input_str}" is a palindrome string')
+else:
+    print(f'"{input_str}" is not a palindrome string')
+
+
+
+#Create this number pattern
+#1
+#12
+#123
+#1234
+#12345
+j=''
+for i in range(1,6):
+    j = f"{j}{i}"
+    print(j)
+
+
+
+
+
+###Create a basic ATM simulation where a user can repeatedly
+balance=10000.00
+is_running=True
+
+print("Welcome to Worlds Best Bank")
+
+while is_running:
+    print("\n =========\n ATM Menu \n =========")
+    print("1. Check Balance")
+    print("2. Deposit Money")
+    print("3. Withdraw money")
+    print("4. Exit")
+
+    choice=int(input("Enter your choice between 1 to 4"))
+
+    if choice==1:
+        print(f"Your current Bank Balance is {balance}")
+    elif choice==2:
+        amount=float(input("Enter amount you would like to deposit"))
+        if amount>0:
+            balance=balance+amount
+            print(f"succesfully Deposited {amount}")
+            print(f"Latest balance is {balance}")
+        else:
+            print("Invalid amount , Please provide latest amount to Deposit")
+    elif choice==3:
+        amount=float(input("Enter amount you would like to withdraw"))
+        if amount>0:
+            balance=balance-amount
+            print(f"succesfully withdraw {amount}")
+            print(f"Latest balance is {balance}")
+        else:
+            print("Invalid amount , Please provide latest amount to Deposit")
+    elif choice==4:
+        print("Thank you for visiting ATM")
+        is_running=False
+    else:
+        print("Invalid choice, Select any choice between 1 to 4")
 
 
 
