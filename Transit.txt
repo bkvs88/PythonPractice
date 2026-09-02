@@ -219,15 +219,24 @@ print(f"positive numbers count is : {positive_count}\nnegative numbers count is 
 
 ##Write a program to determine whether a number is prime using a loop.
 number_inp=input("enter number to check whether given number is prime or not")
-number_inp=int(num_inp)
-check = range(2,num_inp)
+number_inp=int(number_inp)
+check = range(2,number_inp)
 for i in check:
-    print(i)
-    if num_inp%i==0:
-        print("Not a prime")
+    # print(i)
+    if number_inp%i==0:
+        print(f"{number_inp} is Not a prime")
         break
 else:
-    print("Prime number")
+    print(f"{number_inp} is a prime")
+
+## Print all prime numbers between 1 and 100.
+prime_list=[]
+for i in range(2,101):
+    for number in range(2,i):
+        if i%number == 0:
+            break
+    else:
+        print(i,end=" ")
 
 
 
